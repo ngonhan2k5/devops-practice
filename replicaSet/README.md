@@ -22,5 +22,5 @@ Now you can switch off any 1 node without affect client usage
 * Add node```rs.addNode({host: "rs4:27017"})```
 * Check replication status with ```rs.status();``` 
 
-Notice: Mongo replicatSet only work if over a half of node is alive.
+Notice: Mongo replicatSet only work if over a half of nodes is alive, 2/3 and 3/4 in this case.
 #### More at: https://docs.mongodb.com/manual/replication/
