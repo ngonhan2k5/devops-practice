@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+    rs1:
+        image: mongo
+        volumes:
+            - ./conf/rs1:/etc/mongo
+        command: --bind_ip_all -f /etc/mongo/mongod.conf
+
+    rs2:
+        image: mongo
+        volumes:
+            - ./conf/rs1:/etc/mongo
+        command: --bind_ip_all -f /etc/mongo/mongod.conf
+
+    rs3:
+        image: mongo
+        volumes:
+            - ./conf/rs1:/etc/mongo
+        command: --bind_ip_all -f /etc/mongo/mongod.conf
+
+    rs4:
+        image: mongo
+        volumes:
+            - ./conf/rs1:/etc/mongo
+        command: --bind_ip_all -f /etc/mongo/mongod.conf
+
+    mongo-express:
+        image: mongo-express
+        ports:
+            - 8081:8081
+        environment:
+            - ME_CONFIG_MONGODB_URL=mongodb://rs1,rs2,rs3/?replicaSet=mdbDefGuide
+            - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
