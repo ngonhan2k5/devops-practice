@@ -1,7 +1,7 @@
 # Mongo ReplicaSet - How to do with docker
 ### Create a replicaSet for mongo using docker composer
 #### a, Spin up all 4 mongod nodes and 1 mongo admin UI:
-* Run ```docker-compose up -d``` in replicatSet folder
+* Run ```docker-compose up -d``` in replicaSet folder
 * You can open http://localhost:8081 to access admin UI (client)
 #### b, Connect to mongo shell of one node:
 ```docker run -it --network replicaset_default --rm mongo mongo --host rs1```
