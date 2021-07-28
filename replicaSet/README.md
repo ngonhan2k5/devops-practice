@@ -1,7 +1,8 @@
 # Mongo ReplicaSet - How to do with docker
 ### Create a replicaSet for mongo using docker composer
 #### a, Spin up all 4 mongod nodes and 1 mongo admin UI:
-* Run ```docker-compose up -d``` in replicatSet folder then you can open http://localhost:8081 to access admin UI (client)
+* Run ```docker-compose up -d``` in replicatSet folder
+* You can open http://localhost:8081 to access admin UI (client)
 #### b, Connect to mongo shell of one node:
 ```docker run -it --network replicaset_default --rm mongo mongo --host rs1```
 #### c, Enable replicaSet with 3 nodes rs1,rs2,rs3:
@@ -19,4 +20,6 @@ Now you can switch off any 1 node without affect client usage
 * Add node
 ```rs.addNode({host: "rs4:27017"})```
 * Check replacation status with ```rs.status();``` 
+
+Notice: Mongo replicatSet only work if over a half of node is alive.
 #### More at: https://docs.mongodb.com/manual/replication/
