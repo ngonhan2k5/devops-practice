@@ -17,10 +17,10 @@ Now you can switch off any 1 node without affect client usage
 ##### d1- Connect to primary node:
 * Connect to anynode use 
 ```docker run -it --network replicaset_default --rm mongo mongo --host rs1``` 
-* Use ```db.hello()``` to know which is primary then connect to that node use above docker command. 
-* Add node
-```rs.addNode({host: "rs4:27017"})```
-* Check replacation status with ```rs.status();``` 
+* Use ```db.hello()``` to know which is primary (ex rs2)
+* Then connect to rs2 that node use above docker command with ```--host rs2```. 
+* Add node```rs.addNode({host: "rs4:27017"})```
+* Check replication status with ```rs.status();``` 
 
 Notice: Mongo replicatSet only work if over a half of node is alive.
 #### More at: https://docs.mongodb.com/manual/replication/
