@@ -18,3 +18,4 @@ Connect to anynode use
 Use ```db.hello()``` to know which is primary then connect to that node use above docker command. \
 Add node
 ```rs.addNode({host: "rs4:27017"})```
+### 2. [Mongo shard]
