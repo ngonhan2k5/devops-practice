@@ -11,6 +11,7 @@ rsconf = { _id: "mdbDefGuide", members: [ {_id:0, host: "rs1:27017"}, {_id:1, ho
 rs.initiate(rsconf);
 ```
 * Check replacation status with ```rs.status();``` \
+DONE!!! 
 Now you can switch off any 1 node without affect client usage
 #### d, Add node rs4 to replicaSet:
 ##### d1- Connect to primary node:
