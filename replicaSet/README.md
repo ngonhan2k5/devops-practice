@@ -13,7 +13,7 @@ rs.initiate(rsconf);
 * Check replacation status with ```rs.status();``` \
 DONE!!! 
 Now you can switch off any 1 node without affect client usage
-#### d, Add node rs4 to replicaSet: we can only add node from a primary node
+#### d, Extra: Add node rs4 to replicaSet: we can only add node from a primary node
 ##### d1- Connect to primary node:
 * Connect to anynode use 
 ```docker run -it --network replicaset_default --rm mongo mongo --host rs1``` 
