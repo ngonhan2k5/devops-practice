@@ -1,4 +1,4 @@
-# Mongo Server Works - How to
+# Mongo Server Works - How to do with docker
 ### 1. [Mongo replicaSet](https://github.com/ngonhan2k5/devops-practice/tree/master/replicaSet): Create a replicaSet for mongo using docker composer
 #### a, Spin up all 4 mongod nodes and 1 mongo admin UI:
 ```docker-compose up -d``` in replicatSet folder then you can open http://localhost:8081 to access admin UI (client)
